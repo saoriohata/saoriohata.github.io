@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>センサからの信号受信</title>
+   
+</head>
+    
+    
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+  
+ <h1>スマホからのセンサ情報を受信</h1>  
+  <div>
+    <div>あなたのID: <span id="myid"></span></div>
+    <div>ルームID: <span id="room"></span></div>
+    <div>受信した情報はコンソールログで確認してください</div>
+      <div>ティラノサウルスやマンモスを避けて白い円まで辿り着いたらクリアです！</div>
+  </div>
+<script>
+     
+
+    let room = "s1317113";
+    let socket = io.connect('https://qa.fujimura.com');  
+    let speedX = 0;
+    let speedY = 0;
+    let myid; 
+    
+    document.querySelector("#room").innerHTML = room;
+    socket.on('mylogin', function(data) {
+      myid = data;
+      socket.emit('join', room); // 受信room IDを指定
+      document.querySelector("#myid").innerHTML = myid;
+      console.log("あなたのID: ", myid);
+    });
+    
+ 
+            
+    socket.on('sensor', function(data) {
+      console.log(data.g);
+      speedX = 0.05*parseInt(data.g);
+      speedY = 0.05*parseInt(data.b);
+    });
+    
+    let x = 0;
+    let y = 0;
+    let targetX = 0;
+    let targetY = 0;
+    
+ 
+    function preload(){
+        cat = loadImage("karameru1.jpg")
+        thirano = loadImage("thiranosaurus.png")
+        manmos = loadImage("manmos.png")
+        clear = loadImage("clear.jpg")
+        gameover = loadImage("gameover.jpg")
+    }
+    
+   
+ 
+           
+    function setup() {
+
+      createCanvas(640,480);
+      background(200);
+      let x = width/2;
+      let y = height/2;
+        
+      targetA = 590;
+      targetB = 430;
+        
+      targetC = random(width);
+      targetD = random(height);
+        
+      targetE = random(width);
+      targetF = random(height);
+        
+      targetG = random(width);
+      targetH = random(height);
+        
+      targetI = random(width);
+      targetJ = random(height);
+        
+      targetK = random(width);
+      targetL = random(height);
+        
+      targetM = random(width);
+      targetN = random(height);
+        
+      targetO = random(width);
+      targetP = random(height);
+        
+      targetQ = random(width);
+      targetR = random(height);
+        
+      targetS = random(width);
+      targetT = random(height);
+        
+      targetU = random(width);
+      targetV = random(height);
+        
+      targetX = random(width);
+      targetY = random(height);
+        
+      targetW = random(width);
+      targetZ = random(height);
+    }
+    
+   
+ 
+
+        
+    function draw() { 
+        background('#99FF99');
+        x = x + speedX;
+        y = y + speedY;
+        if(x>width-50)x = width-50;
+        if(x<0)x = 0;
+        if(y>height-50) y = height-50
+        if(y<0)y = 0;
+        let distancexy = Math.sqrt(Math.pow(x-targetX,2)+Math.pow(y-targetY,2));
+        let distancewz = Math.sqrt(Math.pow(x-targetW,2)+Math.pow(y-targetZ,2));
+        let distanceab = Math.sqrt(Math.pow(x-targetA,2)+Math.pow(y-targetB,2));
+        let distancecd = Math.sqrt(Math.pow(x-targetC,2)+Math.pow(y-targetD,2));
+        let distanceef = Math.sqrt(Math.pow(x-targetE,2)+Math.pow(y-targetF,2));
+        let distancegh = Math.sqrt(Math.pow(x-targetG,2)+Math.pow(y-targetH,2));
+        let distanceij = Math.sqrt(Math.pow(x-targetI,2)+Math.pow(y-targetJ,2));
+        let distancekl = Math.sqrt(Math.pow(x-targetK,2)+Math.pow(y-targetL,2));
+        let distancemn = Math.sqrt(Math.pow(x-targetM,2)+Math.pow(y-targetN,2));
+        let distanceop = Math.sqrt(Math.pow(x-targetO,2)+Math.pow(y-targetP,2));
+        let distanceqr = Math.sqrt(Math.pow(x-targetQ,2)+Math.pow(y-targetR,2));
+        let distancest = Math.sqrt(Math.pow(x-targetS,2)+Math.pow(y-targetT,2));
+        let distanceuv = Math.sqrt(Math.pow(x-targetU,2)+Math.pow(y-targetV,2));
+        
+        
+        image(thirano,targetX, targetY, 50, 50);
+        image(thirano,targetW,targetZ,100,100);
+        ellipse(targetA,targetB,50,50);
+        image(manmos,targetC,targetD,100,100);
+        image(manmos,targetE,targetF,50,50);
+        image(thirano,targetE,targetF,100,100);
+        image(manmos,targetI,targetJ,100,100);
+        image(thirano,targetK,targetL,100,100);
+        image(manmos,targetM,targetN,100,100);
+        image(thirano,targetO,targetP,100,100);
+        image(manmos,targetQ,targetR,100,100);
+        image(thirano,targetS,targetT,100,100);
+        image(manmos,targetU,targetV,100,100);
+        
+        image(cat,x,y,50,50);
+        
+        if(distancexy<=50){alert("GAME OVER...");background(gameover);exit(0);}
+        if(distancewz<=50){alert("GAME OVER...");background(gameover);exit(0);}
+        if(distancekl<=50){alert("GAME OVER...");background(gameover);exit(0);}
+        if(distancemn<=50){alert("GAME OVER...");background(gameover);exit(0);}
+        if(distanceop<=50){alert("GAME OVER...");background(gameover);exit(0);}
+        if(distanceqr<=50){alert("GAME OVER...");background(gameover);exit(0);}
+        if(distancest<=50){alert("GAME OVER...");background(gameover);exit(0);}
+        if(distanceuv<=50){alert("GAME OVER...");background(gameover);exit(0);}
+        
+        if(distancecd<=50){alert("GAME OVER...");background(gameover);exit(0);}
+        if(distanceef<=50){alert("GAME OVER...");background(gameover);exit(0);}
+        if(distancegh<=50){alert("GAME OVER...");background(gameover);exit(0);}
+        if(distanceij<=50){alert("GAME OVER...");background(gameover);exit(0);}
+        if(distanceab<=50){alert("GAME CLEAR!!!!");background(clear); exit(0);}
+        
+        
+        
+        
+    }
+      
+        
+    
+
+        
+</script>
+
+
+</body>
+
+</html>

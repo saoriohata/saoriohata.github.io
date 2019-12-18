@@ -1,0 +1,180 @@
+{
+  "nodes": [
+       
+    {"id": "アルトリア・ペンドラゴン", "group": 1},
+    {"id": "エミヤ", "group": 1},
+    {"id": "メドゥーサ", "group": 1},
+    {"id": "ヘラクレス", "group": 1},
+    {"id": "ギルガメッシュ", "group": 1},
+    {"id": "クーフーリン", "group": 1},
+    {"id": "佐々木小次郎", "group": 1},
+    {"id": "メディア", "group": 1},
+    
+    {"id": "アンリマユ", "group": 2},
+    {"id": "ステンノ", "group": 2},
+    {"id": "エウリュアレ", "group": 2},
+    
+    {"id": "ディルムッド・オディナ", "group": 3},
+    {"id": "イスカンダル", "group": 3},
+    {"id": "サー・ランスロット", "group": 3},
+    {"id": "ジル・ド・レェ", "group": 3},
+    {"id": "ハサン・ザッバーハ", "group": 3},
+    
+    {"id": "ネロ・クラウディウス", "group": 4},
+    {"id": "玉藻の前", "group": 4},
+    {"id": "ガウェイン", "group": 4},
+    {"id": "ロビンフッド", "group": 4},
+    {"id": "ナーサリーライム", "group": 3},
+    {"id": "アルクェイド・ブリュンスタッド", "group": 4},
+    {"id": "呂布奉先", "group": 4},
+    {"id": "フランシス・ドレイク", "group": 4},
+    {"id": "ヴラド三世(EXTRA)", "group": 4},
+    {"id": "李書文", "group": 4},
+    
+    {"id": "アーサー・ペンドラゴン", "group": 5},
+    {"id": "オジマンディアス", "group": 5},
+    {"id": "パラケルスス", "group": 5},
+    {"id": "ジキル", "group": 5},
+    {"id": "ブリュンヒルデ", "group": 5},
+    {"id": "アーラシュ・カマンガー", "group": 5},
+    {"id": "静のハサン", "group": 5},
+      
+    {"id": "カルナ", "group": 6},
+    {"id": "アンデルセン", "group": 6},
+    {"id": "エリザベート", "group": 6},
+    {"id": "メルトリリス", "group": 6},
+    {"id": "パッションリップ", "group": 6},
+     
+    {"id": "アルテラ", "group": 7},
+    {"id": "ジャンヌダルク", "group": 7},
+    {"id": "アルキメデス", "group": 7},
+      
+    {"id": "シャルルマーニュ", "group": 8},
+    {"id": "アストルフォ", "group": 8},
+    {"id": "スカサハ", "group": 8},
+    {"id": "アルジュナ", "group": 8},
+    {"id": "ダレイオス三世", "group": 8},
+    {"id": "カール大帝", "group": 8},
+    {"id": "アルテラ・ラーヴァ", "group": 8},
+      
+    {"id": "ヴラド三世", "group": 9},
+    {"id": "ケイローン", "group": 9},
+    {"id": "ジークフリート", "group": 9},
+    {"id": "フランケンシュタイン", "group": 9},
+    {"id": "アヴィケプロン", "group": 9},
+    {"id": "ジャック・ザ・リッパー", "group": 9},
+    {"id": "モードレッド", "group": 9},
+    {"id": "セミラミス", "group": 9},
+    {"id": "シェイクスピア", "group": 9},
+    {"id": "アタランテ", "group": 9},
+    {"id": "アキレウス", "group": 9},
+    {"id": "スパルタクス", "group": 9}
+    
+    
+      
+],"links":[
+    
+    
+    {"source": "アルトリア・ペンドラゴン", "target": "エミヤ", "value": 1},
+    {"source": "エミヤ", "target": "アルトリア・ペンドラゴン", "value": 8},
+    {"source": "メドゥーサ", "target": "アルトリア・ペンドラゴン", "value": 1},
+    {"source": "ヘラクレス", "target": "アルトリア・ペンドラゴン", "value": 1},
+    {"source": "ギルガメッシュ", "target": "アルトリア・ペンドラゴン", "value": 5},
+    {"source": "クーフーリン", "target": "アルトリア・ペンドラゴン", "value": 1},
+    {"source": "佐々木小次郎","target": "アルトリア・ペンドラゴン", "value": 1},
+    {"source": "メディア","target": "アルトリア・ペンドラゴン", "value": 1},
+    
+    
+    {"source": "アンリマユ","target": "アルトリア・ペンドラゴン", "value": 1},
+    {"source": "ステンノ","target": "アンリマユ", "value": 1},
+    {"source": "エウリュアレ","target": "アンリマユ", "value": 1},
+    
+    
+    {"source": "ディルムッド・オディナ","target": "ギルガメッシュ", "value": 5},
+    {"source": "イスカンダル","target": "ギルガメッシュ", "value": 5},
+    {"source": "ジル・ド・レェ","target": "イスカンダル", "value": 5},
+    {"source": "サー・ランスロット","target": "ディルムッド・オディナ", "value": 5},
+    {"source": "ハサン・ザッバーハ","target": "ディルムッド・オディナ", "value": 5},
+    
+    
+    {"source": "ネロ・クラウディウス","target": "エミヤ", "value": 5},
+    {"source": "ヴラド三世(EXTRA)","target": "エミヤ", "value": 5},
+    {"source": "ロビンフッド","target": "ヴラド三世(EXTRA)", "value": 5},
+    {"source": "呂布奉先","target": "李書文", "value": 5},
+    {"source": "玉藻の前","target": "ネロ・クラウディウス", "value": 5},
+    {"source": "李書文","target": "ヴラド三世(EXTRA)", "value": 5},
+    {"source": "ガウェイン","target": "ロビンフッド", "value": 5},
+    {"source": "フランシス・ドレイク","target": "ネロ・クラウディウス", "value": 5},
+    {"source": "ナーサリーライム","target": "李書文", "value": 5},
+    {"source": "アルクェイド・ブリュンスタッド","target": "ネロ・クラウディウス", "value": 5},
+    
+     {"source": "ジキル","target": "アーサー・ペンドラゴン", "value": 5},
+     {"source": "オジマンディアス","target": "アーラシュ・カマンガー", "value": 5},
+     {"source": "アーラシュ・カマンガー","target": "アーサー・ペンドラゴン", "value": 5},
+     {"source": "パラケルスス","target": "アーサー・ペンドラゴン", "value": 5},
+     {"source": "ブリュンヒルデ","target": "アーサー・ペンドラゴン", "value": 5},
+     {"source": "静のハサン","target": "アーサー・ペンドラゴン", "value": 5},
+    
+     {"source": "カルナ","target": "ネロ・クラウディウス", "value": 5},
+     {"source": "エリザベート","target": "カルナ", "value": 5},
+     {"source": "アンデルセン","target": "カルナ", "value": 5},
+     {"source": "パッションリップ","target": "アンデルセン", "value": 5},
+     {"source": "メルトリリス","target": "エリザベート", "value": 5},
+    
+    {"source": "アルテラ","target": "フランシス・ドレイク", "value": 5},
+     {"source": "ジャンヌダルク","target": "アルテラ", "value": 5},
+    {"source": "ジャンヌダルク","target": "ジル・ド・レェ", "value": 5},
+     {"source": "アルキメデス","target": "ジャンヌダルク", "value": 5},
+    
+    {"source": "カール大帝","target": "ジャンヌダルク", "value": 5},
+    {"source": "スカサハ","target": "シャルルマーニュ", "value": 5},
+    {"source": "アストルフォ","target": "スカサハ", "value": 5},
+    {"source": "アルジュナ","target": "カルナ", "value": 5},
+    {"source": "ダレイオス三世","target": "エリザベート", "value": 5},
+    {"source": "シャルルマーニュ","target": "アルテラ", "value": 5},
+    {"source": "アルテラ・ラーヴァ","target": "アルテラ", "value": 5},
+    
+    
+    {"source": "ヴラド三世","target": "ジャンヌダルク", "value": 5},
+    {"source": "セミラミス","target": "ヴラド三世", "value": 5},
+    {"source": "セミラミス","target": "カルナ", "value": 5},
+    {"source": "アタランテ","target": "セミラミス", "value": 5},
+    {"source": "アタランテ","target": "メディア", "value": 5},
+    {"source": "アタランテ","target": "ヘラクレス", "value": 5},
+    {"source": "ジークフリート","target": "アタランテ", "value": 5},
+    {"source": "アキレウス","target": "ジークフリート", "value": 5},
+    {"source": "ケイローン","target": "アキレウス", "value": 5},
+    {"source": "ヴラド三世","target": "アストルフォ", "value": 5},
+    {"source": "アヴィケプロン","target": "ケイローン", "value": 5},
+    {"source": "モードレッド","target": "ケイローン", "value": 5},
+    {"source": "モードレッド","target": "ケイローン", "value": 5},
+    {"source": "モードレッド","target": "アルトリア・ペンドラゴン", "value": 5},
+    {"source": "フランケンシュタイン","target": "ケイローン", "value": 5},
+    {"source": "スパルタクス","target": "ケイローン", "value": 5},
+    {"source": "シェイクスピア","target": "ケイローン", "value": 5}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+]
+}

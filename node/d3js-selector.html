@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>D3.jsの学習</title>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+<h1>D3.jsのセレクタ</h1>
+
+<div id="area0">area0はこちら</div>
+<div id="area1">area1はこちら</div>
+<div id="area2">area2はこちら</div>
+
+<script>
+"use strict";
+
+// HTML5で直接記述した場合
+document.querySelector("#area0").style.setProperty("color", "blue");
+  
+// jQueryを使用した場合  
+$("#area1").css("color","green");
+
+// D3.jsを使用した場合
+d3.select("#area2").style("color", "red");
+
+  
+// jQueryを使用してフォントサイズを変える例
+/*
+$("div").css("font-size",function () {
+  return Math.random() * 36;
+})
+*/
+
+// D3.jsを使用してフォントサイズを変える例
+
+d3.selectAll("div").style("font-size", function() {
+  return Math.random() * 36;
+});
+
+
+
+// D3.jsを使用してデータをDOMに割り当てる例
+
+d3.select("body")
+  .selectAll("p")
+  .data([4, 8, 15, 16, 23, 42])
+  .enter().append("p")
+  .text(function(d) { return "I’m number " + d + "!"; });
+
+</script>
+</body>
+</html>
