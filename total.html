@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>円：circles</title>
+
+<!-- 1. ここにP5.jsを読み込む -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+
+<!-- 2.以下にsetup関数とdraw関数を定義 -->
+<script>
+
+function keyPressed() {
+    
+  //f
+    if (keyCode === 70) {
+        saveCanvas();
+    }
+    //d
+     if(keyCode===68){
+        background(255);}
+    
+}
+
+    
+  
+function setup() {
+  createCanvas(800, 800, WEBGL);
+    
+    let locX = mouseX - height/2;
+    let locY = mouseY - width/2
+  
+    
+    ambientLight(100, 124, 227);
+    directionalLight(255, 255, 255, 1, 1, 1);
+    pointLight(0, 0, 255, locX, locY, 250);
+    noStroke();
+    
+    
+
+  
+    
+        
+    }
+    
+   function mouseClicked() {
+    background(255);
+} 
+  
+
+
+
+function draw() {
+  background(0);
+  orbitControl();
+    
+  
+    
+  let locX = mouseX - height/2;
+  let locY = mouseY - width/2;
+  
+  // 板の動き
+  /*push();
+  rotateX(-PI*beta/180);
+  rotateY(PI*gamma/180);
+  translate(0,0,-50);
+  box(800,800,30);
+  pop();*/
+  
+  
+  
+  // ボールの動き
+  push();
+    translate(-width/100.0,10,10);
+    directionalLight(255, 0, 0, 0.25, 0.25, 0);
+    rotateZ(frameCount * 0.02);
+    rotateX(frameCount * 0.02);
+    rotateY(frameCount/30.0);
+    pointLight(0, 0, 255, locX, locY, 250);
+    sphere(height/4.0);
+    
+    if(keyCode ===32){
+        ambientLight(80,124,227);
+        directionalLight(255, 0, 0, 0.25, 0.25, 0);
+        pointLight(0, 0, 255, locX, locY, 250);
+        
+    }
+    //j
+    if(keyCode===74){
+        ambientLight(232,67,139);
+        directionalLight(255, 0, 0, 0.25, 0.25, 0);
+        translate(-width/20.0,100,100);
+        rotateX(frameCount/30.0);
+        pointLight(60, 0, 255, locX, locY, 250);
+    }
+    //l
+    if(keyCode===76){
+        ambientLight(220,45,247);
+        directionalLight(255, 0, 0, 0.35, 0.25, 0);
+        pointLight(0, 0, 255, locX, locY, 250);
+    }
+    
+    //k
+    if(keyCode===75){
+        ambientLight(139,242,80);
+        directionalLight(255, 0, 0, 0.25, 0.25, 0);
+        pointLight(0, 0, 255, locX, locY, 250);
+   
+   
+    pop();
+    
+    
+   
+    }
+ 
+    }
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
